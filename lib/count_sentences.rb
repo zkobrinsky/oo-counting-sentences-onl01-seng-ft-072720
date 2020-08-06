@@ -16,6 +16,7 @@ class String
   end
 
   def count_sentences
+<<<<<<< HEAD
     new_array = []
 
     #replace target punctuation with "*"
@@ -30,6 +31,21 @@ class String
       end
     end
     return new_array.count
+=======
+    string = self.tr('!.?', '*')
+    string = string.split("*")
+
+    i = 0
+    string.each do |string|
+      # binding.pry
+      if string == ""
+        string.splice[i]
+      end
+      i = i+1
+    end
+    # binding.pry
+    return string.count
+>>>>>>> 4c00468e21882216abc13aff9bea7f3c09f4f91e
 
   end
 
